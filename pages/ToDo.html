@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+        <p>タスクを整理して、効率的に管理しましょう！</p>
+    </header>
+
+    <div class="button-container">
+        <a href="../index.html" class="button">Home</a>
+      </div>
+
+    <main>
+        <div class="todo-container">
+            <input type="text" id="todoInput" placeholder="新しいタスクを追加">
+            <button onclick="addTodo()">追加</button>
+            <ul id="todoList"></ul>
+        </div>
+    </main>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <script src="todo.js"></script>
+</body>
+</html>

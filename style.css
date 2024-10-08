@@ -1,0 +1,397 @@
+/* ===== 全体のスタイル ===== */
+  
+  /* ===== ヘッダーのスタイル ===== */
+  /* ヘッダー */
+  header {
+    /* 背景の色 */
+    background-color: 	#aac896;
+    /* 背景の画像 */
+    /* 背景の画像を枠いっぱいに広げる */
+    background-size: cover;
+    /* 内がわの余白 */
+    padding: 30px;
+    
+  }
+  
+    
+
+  /* h1見出し */
+  h1 {
+    /* 文字の大きさ */
+    font-size: 60px;
+    /* 文字の種類 */
+    font-family: 'Times New Roman', Times, serif;
+    /* 文字の色 */
+    color: ivory;
+    /* 文字の整列 */
+    text-align: center;
+  }
+  
+  
+  
+  /* ===== お店紹介のスタイル ===== */
+  /* セクション */
+  section {
+    /* 背景の色 */
+    background-color: ivory;
+    /* 内がわの余白 */
+    padding: 30px;
+    /* 文字の整列 */
+    text-align: left;
+  }
+  
+  /* h2見出し */
+  h2 {
+    background-color: 	#aac896;
+    background-size: cover;
+    /* 文字の色 */
+    color: ivory;
+    /* 文字の大きさ */
+    font-size: 20px;
+    /* 下がわの余白 */
+    margin-top: 10px;
+    text-align:center;
+  }
+  
+  /* レイアウト用の箱 */
+  div {
+    /* レイアウトのルール */
+    display: flex;
+  }
+  
+ 
+  
+  /* 段落 */
+  p {
+    /* 文字の行間 */
+    line-height: 180%;
+    /* 左がわの余白 */
+    margin-left: 20px;
+  }
+  
+  
+  /* ===== メニューのスタイル ===== */
+  /* メニューのセクション */
+  section.menu {
+    /* 背景の画像 */
+    background-image: url(wood.jpg);
+  }
+  
+  /* メニューのh2見出し */
+  h2.menu-title {
+    /* 文字の色 */
+    color: white;
+  }
+  
+  /* メニュー表 */
+  table {
+    /* 横幅 */
+    width: 100%;
+    /* 下がわの余白 */
+    margin-bottom: 20px;
+    /* 枠線の設定 */
+    border-collapse: collapse;
+    /* 背景の色 */
+    background-color: ivory;
+  }
+  
+  /* メニュー表のセル */
+  td {
+    /* 枠線 */
+    border: 1px solid black;
+    /* 内がわの余白 */
+    padding: 10px;
+  }
+  
+  /* メニュー表の見出しセル */
+  th {
+    /* 枠線 */
+    border: 1px solid black;
+    /* 内がわの余白 */
+    padding: 10px;
+    /* 背景の色 */
+    background-color: gold;
+  }
+
+  
+ 
+  /* ===== フッターのスタイル ===== */
+  /* フッター */
+  footer {
+    /* 文字の色 */
+    color: #aac896;
+    /* 背景の色 */
+    background-color: ivory;
+    /* 文字の整列 */
+    text-align: center;
+    /* 内がわの余白 */
+    padding: 10px;
+  }
+  
+  .audio-player {
+    width: 400px;
+    margin: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 15px;
+    background-color: #ccc;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+}
+
+#current-time, #total-time {
+    float: left;
+    width: 15%;
+    color:white;
+    font: bold;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slide {
+  min-width: calc(100% / 3); /* 3 slides visible at a time */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 20px;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: pointer; /* Indicates clickable image */
+}
+
+.description {
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 1;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.home-button {
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  background-color: #4CAF50; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+}
+
+.home-button a {
+  text-decoration: none; 
+  color: white; 
+  font-size: 16px;
+}
+
+.home-button a:hover {
+  background-color: #45a049;
+  color: #fff;
+  transition: 0.3s;
+}
+
+
+section {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.introduction {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.features h2, .call-to-action h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.feature {
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+}
+
+
+.highlight {
+  transition: background-color 5s ease, transform 5s ease;
+}
+
+.animate-highlight {
+  background-color: yellow; 
+  transform: scale(1.1); 
+}
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;  
+  right: 20px;  
+  z-index: 99;
+  font-size: 24px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  outline: none; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; 
+}
+
+#scrollTopBtn:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2em;
+  }
+
+  section {
+      padding: 15px;
+  }
+
+  .introduction {
+      font-size: 1em;
+  }
+
+  .feature h3 {
+      font-size: 1.3em;
+  }
+}
+
+        
+
+        
+        ::-webkit-scrollbar {
+          width: 12px; 
+          background-color: transparent; 
+          position: absolute;
+          left: 0;
+      }
+
+
+      ::-webkit-scrollbar-thumb {
+          background-color: #4CAF50; 
+          border-radius: 6px;
+      }
+
+
+      ::-webkit-scrollbar-thumb:hover {
+          background-color: #45a049;
+      }
+
+      
+      ::-webkit-scrollbar-track {
+          background-color: rgba(0, 0, 0, 0.1); 
+      }
+
+      .button-container {
+        position: fixed; 
+        top: 20px; 
+        left: 20px; 
+        display: flex; 
+        gap: 10px;
+    }
+
+    
+    .button {
+        background-color: #4CAF50;
+        padding: 10px 20px; 
+        border-radius: 5px; 
+        color: white; 
+        text-decoration: none;
+        font-size: 16px; 
+        transition: background-color 0.3s; 
+    }
+
+    
+    .button:hover {
+        background-color: #45a049;
+    }
